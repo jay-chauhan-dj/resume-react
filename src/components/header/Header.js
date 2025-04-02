@@ -14,9 +14,9 @@ const Header = (props) => {
             <div className="wraper">
                 <div className="flex items-center justify-between">
                     <MobileMenu />
-                    <div className="w-[195px] md:w-[280px] sm:w-[200px] col:w-[50px]">
-                        <AnchorLink href='#scrool' className="text-[45px] col:text-[25px] font-bold flex items-center md:justify-center text-white">
-                                <img className=" rounded-[50%] mr-[10px] " src={Logo} alt="" />Jay
+                    <div className="w-[350px] md:w-[280px] sm:w-[200px] col:w-[50px]">
+                        <AnchorLink href='#scrool' className="text-[35px] col:text-[25px] font-bold flex items-center md:justify-center text-white">
+                                <img className="mr-[10px] h-16" src={Logo} alt="Jay Chauhan" />Jay Chauhan
                         </AnchorLink>
                     </div>
                     <ul className="md:hidden">

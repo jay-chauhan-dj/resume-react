@@ -58,24 +58,24 @@ const ServiceSection = (props) => {
                 <Nav tabs className='flex col:flex-col-reverse items-center justify-center list-none'>
                     <NavItem>
                         <NavLink
-                            className={`${classnames({ active: activeTab === '2' })} nav-link inline-block focus:border-transparent border-tab
+                            className={`${classnames({ active: activeTab === '1' })} nav-link inline-block focus:border-transparent border-tab
                             w-[250px] md:w-[180px] sm:w-[120px] col:w-[150px] h-[65px] md:h-[55px] sm:h-[45px] bg-[#373737] active:bg-transparent 
                              text-center mr-7 md:mr-5 sm:mr-[10px] col:mb-[10px] col:mr-0 rounded-[38px] font-bold text-[22px] md:text-[16px] sm:text-[14px] leading-[65px] 
                              md:leading-[55px] sm:leading-[35px] p-0 border-2 border-transparent 
                              text-white active:text-[#FFE600] active:border-[#373737]`}
-                            onClick={() => { toggle('2'); }}
+                            onClick={() => { toggle('1'); }}
                         >
                             Development
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink
-                            className={`${classnames({ active: activeTab === '3' })} nav-link inline-block focus:border-transparent border-tab
+                            className={`${classnames({ active: activeTab === '2' })} nav-link inline-block focus:border-transparent border-tab
                             w-[250px] md:w-[180px] sm:w-[120px] col:w-[150px] h-[65px] md:h-[55px] sm:h-[45px] bg-[#373737] active:bg-transparent 
                              text-center mr-7 md:mr-5 sm:mr-[10px] col:mb-[10px] col:mr-0 rounded-[38px] font-bold text-[22px] md:text-[16px] sm:text-[14px] leading-[65px] 
                              md:leading-[55px] sm:leading-[35px] p-0 border-2 border-transparent 
                              text-white active:text-[#FFE600] active:border-[#373737]`}
-                            onClick={() => { toggle('3'); }}
+                            onClick={() => { toggle('2'); }}
                         >
                             Deployment
                         </NavLink>
@@ -84,7 +84,7 @@ const ServiceSection = (props) => {
                 <div className="mt-[65px] sm:mt-[45px]">
 
                     <TabContent activeTab={activeTab}>
-                        <TabPane tabId="2">
+                        <TabPane tabId="1">
                             <div className="row align-items-center">
                                 {Services.slice(0, 3).map((service, srv) => (
                                     <div className="w-[31%] lg:w-[30%] md:w-[46%] sm:w-full mx-[10px] sm:mx-0 inline-block bg-[#232221] border-2 border-[#373737] rounded-[12px] 
@@ -105,7 +105,7 @@ const ServiceSection = (props) => {
                                 ))}
                             </div>
                         </TabPane>
-                        <TabPane tabId="3">
+                        <TabPane tabId="2">
                             <div className="row align-items-center">
                                 {Services.slice(3, 6).map((service, srv) => (
                                     <div className="w-[31%] lg:w-[30%] md:w-[46%] sm:w-full mx-[10px] sm:mx-0 inline-block bg-[#232221] border-2 border-[#373737] rounded-[12px] 
@@ -130,7 +130,9 @@ const ServiceSection = (props) => {
                 </div>
 
             </div>
-            <ServiceSingle open={open} onClose={handleClose} title={state.sTitle} dImg={state.sImgS} sImg1={state.ssImg1} sImg2={state.ssImg2} />
+            {(open) ? (
+                <ServiceSingle open={open} onClose={handleClose} item={state} />
+            ) : ("")}
         </section>
     );
 }

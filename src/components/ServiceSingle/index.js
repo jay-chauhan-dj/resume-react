@@ -10,8 +10,7 @@ import Contact from './contact';
 import Services from '../../api/service'
 
 
-const ServiceSingle = ({ maxWidth, open, onClose, title, dImg, sImg1, sImg2, }) => {
-
+const ServiceSingle = ({ maxWidth, open, onClose, item }) => {
     const styles = (theme) => ({
         root: {
             margin: 0,
@@ -59,69 +58,51 @@ const ServiceSingle = ({ maxWidth, open, onClose, title, dImg, sImg1, sImg2, }) 
                                     <div className="wpo-service-single-wrap">
                                         <div className="wpo-service-single-item">
                                             <div className="wpo-service-single-main-img">
-                                                <img src={dImg} alt="" />
+                                                <img src={item.sImgS} loading="lazy" alt={item.sTitle} />
                                             </div>
                                             <div className="wpo-service-single-title">
-                                                <h3>{title}</h3>
+                                                <h3>{item.sTitle}</h3>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere amet
-                                                tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, platea condimentum cursus
-                                                velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum
-                                                quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                                sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur
-                                                amet risus bibendum. Posuere et eget orci, tempor enim.</p>
-                                            <p>Hac nibh fermentum nisi, platea condimentum cursus velit dui. Massa volutpat odio
-                                                facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at
-                                                rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit.</p>
+                                            <p className="text-justify">{item.des1}</p><br />
+                                            <p className="text-justify">{item.des2}</p>
                                             <div className="flex flex-row flex-wrap justify-center pt-9">
                                                 <div className="basis-1/2 sm:basis-full">
                                                     <div className="wpo-p-details-img pr-2 sm:pr-0">
-                                                        <img src={sImg1} alt="" />
+                                                        <img src={item.ssImg1} loading="lazy" alt={item.sTitle} />
                                                     </div>
                                                 </div>
                                                 <div className="basis-1/2 sm:basis-full">
                                                     <div className="wpo-p-details-img pl-2 sm:pl-0">
-                                                        <img src={sImg2} alt="" />
+                                                        <img src={item.ssImg2} loading="lazy" alt={item.sTitle} />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="wpo-service-single-item list-widget">
                                             <div className="wpo-service-single-title">
-                                                <h3>Our Capabilities</h3>
+                                                <h3>My Capabilities</h3>
                                             </div>
-                                            <p>Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id
-                                                risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                                sollicitudin diam.</p>
+                                            <p>{item.capabilities.desc}</p>
                                             <ul>
-                                                <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                <li>Massa volutpat odio facilisis purus sit elementum.</li>
-                                                <li>Elit curabitur amet risus bibendum.</li>
+                                                {item.capabilities.points.map((point, index) => (
+                                                    <li key={index}>{point}</li>
+                                                ))}
                                             </ul>
                                         </div>
                                         <div className="wpo-service-single-item">
                                             <div className="wpo-service-single-title">
-                                                <h3>Our approach</h3>
+                                                <h3>My approach</h3>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse aenean
-                                                tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi
-                                                eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit
-                                                elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae
-                                                id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem
-                                                adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce
-                                                vulputate diam interdum morbi ac a.</p>
+                                            <p>{item.approch}</p>
                                         </div>
                                         <div className="wpo-service-single-item list-widget">
                                             <div className="wpo-service-single-title">
-                                                <h3>Our Work Process</h3>
+                                                <h3>My Work Process</h3>
                                             </div>
                                             <ul>
-                                                <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                <li>Massa volutpat odio facilisis purus sit elementum.</li>
+                                                {item.process.map((point, index) => (
+                                                    <li key={index}>{point}</li>
+                                                ))}
                                             </ul>
                                         </div>
                                         <div className="wpo-service-single-item">
@@ -135,7 +116,7 @@ const ServiceSingle = ({ maxWidth, open, onClose, title, dImg, sImg1, sImg2, }) 
                                                             <div className="wpo-service-item">
                                                                 <i className={`fi ${service.icon}`} ></i>
                                                                 <h2>{service.sTitle}</h2>
-                                                                <p>Lacus, etiam sed est eu tempus need Temer diam congue.</p>
+                                                                <p>{service.description}</p>
                                                             </div>
                                                         </div>
                                                     ))}
