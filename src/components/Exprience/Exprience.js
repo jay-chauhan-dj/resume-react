@@ -1,40 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import logo1 from '../../images/work/1.png'
+import logo1 from '../../images/work/sylvi.png'
 import logo2 from '../../images/work/2.png'
-import logo3 from '../../images/work/3.png'
-import logo4 from '../../images/work/4.png'
+import logo3 from '../../images/work/omeecron.png'
 
 const Expriences = [
     {
-        date: '2015 - 2016',
+        date: '2023 - Cur.',
         logo: logo1,
-        position: 'Junior Visual Designer',
-        companyName: 'Trapeza Group, USA.',
-        workFrom: '',
+        position: 'Technical Lead',
+        companyName: 'Sylvi - Style Feathers',
+        workFrom: ' (On - site)',
+        website: 'https://www.sylvi.in'
     },
     {
-        date: '2017 - 2018',
+        date: '2020 - Cur.',
         logo: logo2,
-        position: 'UI/UX Designer',
-        companyName: 'Gallerie Ontario, Canada',
-        workFrom: '(Remote)',
+        position: 'Software Developer',
+        companyName: 'Freelancer',
+        workFrom: ' (Remote)',
+        website: '/'
     },
     {
-        date: '2019 - 2020',
+        date: '2021 - 2023',
         logo: logo3,
-        position: 'Seinor UI/UX Desinger',
-        companyName: 'Morson Hybrid, Canada',
-        workFrom: '',
-    },
-    {
-        date: '2020 - 2023',
-        logo: logo4,
-        position: 'Product Designer',
-        companyName: 'Myant Inc. Etobicoke, ON',
-        workFrom: '(Remote)',
-    },
-
+        position: 'Seinor Web Developer',
+        companyName: 'Omeecron Solutions',
+        workFrom: ' (On - site)',
+        website: 'https://www.omeecron.com/'
+    }
 ]
 
 
@@ -45,10 +38,7 @@ const Exprience = (props) => {
                 <div className="max-w-[640px] mx-auto text-center text-white mb-[60px] md:mb-[40px]">
                     <h2 className="heading-font font-bold text-5xl md:text-[35px] sm:text-[22px] mb-[15px]">My Work
                         Experience</h2>
-                    <p className="base-font text-lg font-normal">Must explain to yotu how all this mistaken idea of
-                        denouncing
-                        pleasure born and give you
-                        a complete account the system</p>
+                    <p className="base-font text-lg font-normal">Embark on a digital transformation with me, a Full Stack Developer with 4+ years of experience. I specialize in building user-focused web applications using PHP, Laravel, React, and Vue, turning ideas into seamless, functional solutions.</p>
                 </div>
                 <div className="grid grid-rows-1">
                     {Expriences.map((exprience, exp) => (
@@ -57,16 +47,16 @@ const Exprience = (props) => {
                             <li
                                 className="base-font text-white font-bold text-3xl sm:w-1/2 sm:text-[16px] col:w-full col:text-center col:mb-[10px]">{exprience.date}</li>
                             <li><img src={exprience.logo} alt='logo'
-                                className="sm:w-1/2 col:w-full col:text-center max-w-[100px] col:mx-auto" /></li>
+                                className="sm:w-1/2 rounded-[50%] col:w-full col:text-center max-w-[100px] col:mx-auto" /></li>
                             <li className="sm:w-1/2 col:w-full col:text-center col:mt-[20px]">
                                 <h2 className="base-font text-white font-bold text-2xl sm:text-[16px] ">{exprience.position}
                                 </h2>
                                 <p className="base-font text-[#DD584F] font-normal text-[15px] sm:text-[14px]">{exprience.companyName},
                                     {exprience.workFrom}.</p>
                             </li>
-                            <li className="col:text-center col:mt-[10px]"><Link to="/"
+                            <li className="col:text-center col:mt-[10px]"><a target='_blank' rel="noreferrer noopener" href={exprience.website}
                                 className="text-white text-[16px] font-bold transition hover:text-[#FFE600] sm:w-1/2 sm:text-[14px] col:w-full col:text-center">
-                                <i className="ti-arrow-right transition mr-7 text-[16px] col:mr-[5px]"></i>Go to website</Link>
+                                <i className="ti-arrow-right transition mr-7 text-[16px] col:mr-[5px]"></i>Go to website</a>
                             </li>
                         </ul>
                     ))}

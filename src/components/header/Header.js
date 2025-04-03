@@ -44,12 +44,12 @@ const Header = (props) => {
                     before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
                      hover:before:opacity-100 hover:before:visible
                     ">Service</Link> </li>
-                        <li className="relative inline-block group">
+                        {/* <li className="relative inline-block group">
                             <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500} className="relative group text-[16px] lg:text-[14px] py-[35px] xl:py-[30px] px-[20px] xl:px-[6px] text-white block capitalize font-base-font font-medium
                     before:absolute before:left-0 before:bottom-0 before:w-full before:h-[4px] before:bg-[#59C378] before:content 
                     before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
                      hover:before:opacity-100 hover:before:visible
-                    ">Portfolio</Link></li>
+                    ">Portfolio</Link></li> */}
                         <li className="relative inline-block">
                             <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500} className="relative group text-[16px] lg:text-[14px] py-[35px] xl:py-[30px] px-[20px] xl:px-[6px] text-white block capitalize font-base-font font-medium
                     before:absolute before:left-0 before:bottom-0 before:w-full before:h-[4px] before:bg-[#59C378] before:content 

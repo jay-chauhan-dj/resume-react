@@ -11,23 +11,23 @@ const SubmitHandler = (e) => {
 const Footer = (props) => {
     return (
         <footer className="relative bg-[#191919] z-10">
-            <CtaSection/>
+            <CtaSection />
             <div className="pt-[170px] pb-[90px] md:py-[90px] md:pb-[20px] overflow-hidden relative -z-10">
                 <div className="wraper">
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3">
                         <div className="w-[420px] xl:w-[355px] lg:w-[297px] pr-[75px] md:mb-[40px] lg:pr-0 relative text-left after:absolute after:content[''] after:bg-[#ffffff0d] after:w-[1px] after:h-full after:right-[30px] after:top-0 after:lg:hidden">
                             <div className="mb-7">
                                 <Link className="text-[45px] font-bold flex items-center text-white" to="/">
-                                    <img className=" rounded-[50%] mr-[10px] " src={Logo} alt="" />Elito.</Link>
+                                    <img className="mr-[10px] h-32" src={Logo} alt="" />Jay Chauhan</Link>
                             </div>
                             <p className="text-white text-[16px] mb-[10px]">Welcome and open yourself to your truest love this year with us! With the Release
                                 Process</p>
                             <ul className="overflow-hidden pt-[15px]">
-                                <li className="text-white float-left group "><Link className="text-white transition-all group-hover:text-[#FFE600]" to="/"><i className="ti-facebook"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#FFE600]" to="/"><i className="ti-twitter-alt"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#FFE600]" to="/"><i className="ti-linkedin"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#FFE600]" to="/"><i className="ti-pinterest"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#FFE600]" to="/"><i className="ti-vimeo-alt"></i></Link></li>
+                                <li className="text-white float-left group "><a rel='noopener noreferrer' target='_blank' className="text-white transition-all group-hover:text-[#FFE600]" href="https://mail.google.com/mail/u/0/?fs=1&to=contact@dj-jay.in&tf=cm"><i className="ti-email"></i></a></li>
+                                <li className="text-white float-left group ml-[15px]"><a rel='noopener noreferrer' target='_blank' className="text-white transition-all group-hover:text-[#FFE600]" href="https://x.dj-jay.in"><i className="ti-twitter-alt"></i></a></li>
+                                <li className="text-white float-left group ml-[15px]"><a rel='noopener noreferrer' target='_blank' className="text-white transition-all group-hover:text-[#FFE600]" href="https://linkedin.dj-jay.in"><i className="ti-linkedin"></i></a></li>
+                                <li className="text-white float-left group ml-[15px]"><a rel='noopener noreferrer' target='_blank' className="text-white transition-all group-hover:text-[#FFE600]" href="https://github.dj-jay.in"><i className="ti-github"></i></a></li>
+                                <li className="text-white float-left group ml-[15px]"><a rel='noopener noreferrer' target='_blank' className="text-white transition-all group-hover:text-[#FFE600]" href="https://instagram.dj-jay.in"><i className="ti-instagram"></i></a></li>
                             </ul>
                         </div>
 
@@ -36,10 +36,9 @@ const Footer = (props) => {
                                 <h3 className="text-[24px] font-bold font-base-font text-white capitalize">Navigation</h3>
                             </div>
                             <ul>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="about" spy={true} smooth={true} duration={500}>About us</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="contact" spy={true} smooth={true} duration={500}>Contact us</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="portfolio" spy={true} smooth={true} duration={500}>Video Guide</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="blog" spy={true} smooth={true} duration={500}>Recent Post</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="about" spy={true} smooth={true} duration={500}>About me</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="contact" spy={true} smooth={true} duration={500}>Contact me</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="blog" spy={true} smooth={true} duration={500}>Blogs</Link></li>
                             </ul>
                         </div>
                         <div className="pl-[15px] md:pl-[0px] md:mb-[40px] lg:pr-0 relative text-left ">
@@ -47,10 +46,10 @@ const Footer = (props) => {
                                 <h3 className="text-[24px] font-bold font-base-font text-white capitalize">All Services</h3>
                             </div>
                             <ul>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true}  duration={500}>Web Design</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true}  duration={500}>Web Development</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true}  duration={500}>Brand Identity</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true}  duration={500}>Digital Marketing</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true} duration={500}>Web Delepment</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true} duration={500}>App Development</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true} duration={500}>Software Development</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" pl-[15px] before:absolute before:bg-white before:transition-all before:hover:bg-[#59C378] before:w-[5px] before:h-[1px] before:left-0 before:top-[10px] before:content-[''] text-white hover:text-[#59C378] transition-all" to="service" spy={true} smooth={true} duration={500}>Server Deployment</Link></li>
                             </ul>
                         </div>
                         <div className=" md:mb-[40px] lg:pr-0 relative text-left ">
@@ -90,7 +89,7 @@ const Footer = (props) => {
             <div className="wraper">
                 <div className=" border-t-1 border-[#ffffff0d] relative">
                     <div className="h-[1px] absolute left-[15px] top-0 bg-[#ffffff0d] w-[calc(100%+30px)]"></div>
-                    <p className="text-center text-white text-[14px] py-[20px]">Copyright &copy; 2023 Elito. All rights reserved.</p>
+                    <p className="text-center text-white text-[14px] py-[20px]">Copyright &copy; 2025 Jay Chauhan. All rights reserved.</p>
                 </div>
             </div>
         </footer>

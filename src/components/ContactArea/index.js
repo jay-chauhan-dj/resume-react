@@ -11,8 +11,7 @@ const ContactArea = (props) => {
                         <div className="max-w-[640px] mx-auto text-center text-white mb-[60px] md:mb-[40px]">
                             <h2 className="heading-font font-bold text-5xl md:text-[35px] sm:text-[22px] mb-[15px]">Let’s Talk
                             </h2>
-                            <p className="base-font text-lg font-normal">Must explain to you how all this mistaken idea pleasure
-                                born and give you a complete account.</p>
+                            <p className="base-font text-lg font-normal">I am available for freelance work. Connect with me via the details bellow.</p>
                         </div>
                     </div>
                     <div className="wraper flex flex-row flex-wrap justify-center">
@@ -25,35 +24,35 @@ const ContactArea = (props) => {
                         <div className="basis-1/1 md:basis-full">
                             <div className="wpo-contact-info">
                                 <div className="info-item">
-                                    <h2>25 North Street,Dubai</h2>
+                                    <h2>Address</h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-location"></i>
                                         </div>
                                         <div className="info-text">
-                                            <span>Office Address</span>
+                                            <span>1, Global Residency,<br /> Surat, Gujarat,<br /> IND - 395009</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="info-item">
-                                    <h2>info@elito.com</h2>
+                                    <h2>Official Mail</h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-mail"></i>
                                         </div>
                                         <div className="info-text">
-                                            <span>Official Mail</span>
+                                            <span>contact@dj-jay.in</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="info-item">
-                                    <h2>+91 256-987-239</h2>
+                                    <h2>Official Phone</h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-phone-call"></i>
                                         </div>
                                         <div className="info-text">
-                                            <span>Official Phone</span>
+                                            <span>+91 93134 40532</span>
                                         </div>
                                     </div>
                                 </div>
